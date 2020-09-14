@@ -1,0 +1,190 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  InverterBasedTransceiver
+* Top Cell Name: Receiver
+* View Name:     schematic
+* Netlisted on:  Sep 14 01:52:08 2020
+************************************************************************
+
+.INCLUDE  $PDK_HOME/LVS/Calibre/source.cdl
+*.EQUATION
+*.SCALE METER
+.PARAM
+
+
+
+************************************************************************
+* Library Name: InverterBasedTransceiver
+* Cell Name:    Inverter1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT Inverter1 GND INP OUT VDD
+*.PININFO INP:I OUT:O GND:B VDD:B
+mMN2 OUT INP GND GND nshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMN1 OUT INP GND GND nshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMN0 OUT INP GND GND nshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP5 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP4 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP3 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP2 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP1 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP0 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+.ENDS
+
+************************************************************************
+* Library Name: InverterBasedTransceiver
+* Cell Name:    Resist_FB_INV
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT Resist_FB_INV GND INP OUT VDD
+*.PININFO INP:I OUT:O GND:B VDD:B
+XI0 GND INP OUT VDD / Inverter1
+mMP1 OUT OUT net06 VDD pshort m=1 w=0.55 l=8.00 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP0 net06 net06 INP VDD pshort m=1 w=0.55 l=8.00 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+.ENDS
+
+************************************************************************
+* Library Name: InverterBasedTransceiver
+* Cell Name:    Inverter2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT Inverter2 GND INP OUT VDD
+*.PININFO INP:I OUT:O GND:B VDD:B
+mMP17 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP16 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP15 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP14 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP13 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP12 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP11 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP10 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP9 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP8 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP7 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP6 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP5 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP4 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP3 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP2 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP1 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP0 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMN8 OUT INP GND GND nshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMN7 OUT INP GND GND nshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMN6 OUT INP GND GND nshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMN5 OUT INP GND GND nshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMN4 OUT INP GND GND nshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMN3 OUT INP GND GND nshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMN2 OUT INP GND GND nshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMN1 OUT INP GND GND nshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMN0 OUT INP GND GND nshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+.ENDS
+
+************************************************************************
+* Library Name: InverterBasedTransceiver
+* Cell Name:    Inverter0
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT Inverter0 GND INP OUT VDD
+*.PININFO INP:I OUT:O GND:B VDD:B
+mMP1 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP0 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMN0 OUT INP GND GND nshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+.ENDS
+
+************************************************************************
+* Library Name: InverterBasedTransceiver
+* Cell Name:    NAND
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT NAND GND INP1 INP2 OUT VDD
+*.PININFO INP1:I INP2:I OUT:O GND:B VDD:B
+mMN1 net22 INP2 GND GND nshort m=1 w=7.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMN0 OUT INP1 net22 GND nshort m=1 w=7.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP1 OUT INP2 VDD VDD pshort m=1 w=7.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP0 OUT INP1 VDD VDD pshort m=1 w=7.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+.ENDS
+
+************************************************************************
+* Library Name: InverterBasedTransceiver
+* Cell Name:    DFF
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT DFF CLK D GND Q Q_BAR VDD
+*.PININFO CLK:I D:I Q:O Q_BAR:O GND:B VDD:B
+XI9 GND CLK net015 VDD / Inverter0
+XI0 GND D net3 VDD / Inverter0
+XI8 GND Q net027 Q_BAR VDD / NAND
+XI7 GND net028 Q_BAR Q VDD / NAND
+XI6 GND net015 net07 net027 VDD / NAND
+XI5 GND net08 net015 net028 VDD / NAND
+XI4 GND net08 net17 net07 VDD / NAND
+XI3 GND net13 net07 net08 VDD / NAND
+XI2 GND net3 CLK net17 VDD / NAND
+XI1 GND D CLK net13 VDD / NAND
+.ENDS
+
+************************************************************************
+* Library Name: InverterBasedTransceiver
+* Cell Name:    Receiver
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT Receiver CLK GND INP OUT OUT_B VDD
+*.PININFO CLK:I INP:I OUT:O OUT_B:O GND:B VDD:B
+XI0 GND INP net10 VDD / Resist_FB_INV
+XI1 GND net10 net9 VDD / Inverter2
+XI2 CLK net9 GND OUT OUT_B VDD / DFF
+.ENDS
+
