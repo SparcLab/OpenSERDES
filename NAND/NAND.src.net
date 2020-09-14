@@ -1,0 +1,34 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  InverterBasedTransceiver
+* Top Cell Name: NAND
+* View Name:     schematic
+* Netlisted on:  Sep  8 20:45:25 2020
+************************************************************************
+
+.INCLUDE  $PDK_HOME/LVS/Calibre/source.cdl
+*.EQUATION
+*.SCALE METER
+.PARAM
+
+
+
+************************************************************************
+* Library Name: InverterBasedTransceiver
+* Cell Name:    NAND
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT NAND GND INP1 INP2 OUT VDD
+*.PININFO INP1:I INP2:I OUT:O GND:B VDD:B
+mMN1 net22 INP2 GND GND nshort m=1 w=7.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMN0 OUT INP1 net22 GND nshort m=1 w=7.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP1 OUT INP2 VDD VDD pshort m=1 w=7.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP0 OUT INP1 VDD VDD pshort m=1 w=7.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+.ENDS
+

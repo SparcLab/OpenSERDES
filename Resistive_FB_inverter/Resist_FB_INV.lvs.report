@@ -1,0 +1,471 @@
+
+
+
+                  ##################################################
+                  ##                                              ##
+                  ##         C A L I B R E    S Y S T E M         ##
+                  ##                                              ##
+                  ##             L V S   R E P O R T              ##
+                  ##                                              ##
+                  ##################################################
+
+
+
+REPORT FILE NAME:         Resist_FB_INV.lvs.report
+LAYOUT NAME:              /home/sparclab/a/gauravk/skywater/svdb/Resist_FB_INV.sp ('Resist_FB_INV')
+SOURCE NAME:              /home/sparclab/a/gauravk/skywater/Resist_FB_INV.src.net ('Resist_FB_INV')
+RULE FILE:                /home/sparclab/a/gauravk/skywater/_xrcControlFile_s8_
+CREATION TIME:            Thu Sep 10 21:12:57 2020
+CURRENT DIRECTORY:        /home/sparclab/a/gauravk/skywater
+USER NAME:                gauravk
+CALIBRE VERSION:          v2016.2_26.21    Fri Jun 10 09:55:03 PDT 2016
+
+
+
+                               OVERALL COMPARISON RESULTS
+
+
+
+                         #       ###################       _   _   
+                        #        #                 #       *   *   
+                   #   #         #     CORRECT     #         |     
+                    # #          #                 #       \___/  
+                     #           ###################               
+
+
+
+
+**************************************************************************************************************
+                                      CELL  SUMMARY
+**************************************************************************************************************
+
+  Result         Layout                        Source
+  -----------    -----------                   --------------
+  CORRECT        Resist_FB_INV                 Resist_FB_INV
+
+
+
+**************************************************************************************************************
+                                      LVS PARAMETERS
+**************************************************************************************************************
+
+
+o LVS Setup:
+
+   // LVS COMPONENT TYPE PROPERTY
+   // LVS COMPONENT SUBTYPE PROPERTY
+   // LVS PIN NAME PROPERTY
+   LVS POWER NAME                         "VDD" "VPWR" "vdd"
+   LVS GROUND NAME                        "VSS" "VGND" "GND" "gnd"
+   LVS CELL SUPPLY                        NO
+   LVS RECOGNIZE GATES                    ALL
+   LVS IGNORE PORTS                       NO
+   LVS CHECK PORT NAMES                   YES
+   LVS IGNORE TRIVIAL NAMED PORTS         NO
+   LVS BUILTIN DEVICE PIN SWAP            YES
+   LVS ALL CAPACITOR PINS SWAPPABLE       NO
+   LVS DISCARD PINS BY DEVICE             YES
+   LVS SOFT SUBSTRATE PINS                NO
+   LVS INJECT LOGIC                       NO
+   LVS EXPAND UNBALANCED CELLS            YES
+   LVS FLATTEN INSIDE CELL                NO
+   LVS EXPAND SEED PROMOTIONS             NO
+   LVS PRESERVE PARAMETERIZED CELLS       NO
+   LVS GLOBALS ARE PORTS                  YES
+   LVS REVERSE WL                         NO
+   LVS SPICE PREFER PINS                  YES
+   LVS SPICE SLASH IS SPACE               NO
+   LVS SPICE ALLOW FLOATING PINS          YES
+   LVS SPICE ALLOW INLINE PARAMETERS      NO
+   LVS SPICE ALLOW UNQUOTED STRINGS       YES
+   LVS SPICE CONDITIONAL LDD              NO
+   LVS SPICE CULL PRIMITIVE SUBCIRCUITS   NO
+   LVS SPICE IMPLIED MOS AREA             NO
+   // LVS SPICE MULTIPLIER NAME
+   LVS SPICE OVERRIDE GLOBALS             YES
+   LVS SPICE REDEFINE PARAM               YES
+   LVS SPICE REPLICATE DEVICES            YES
+   LVS SPICE SCALE X PARAMETERS           NO
+   LVS SPICE STRICT WL                    YES
+   // LVS SPICE OPTION
+   LVS STRICT SUBTYPES                    YES
+   LVS EXACT SUBTYPES                     NO
+   LAYOUT CASE                            NO
+   SOURCE CASE                            NO
+   LVS COMPARE CASE                       NO
+   LVS DOWNCASE DEVICE                    NO
+   LVS REPORT MAXIMUM                     50
+   LVS PROPERTY RESOLUTION MAXIMUM        ALL
+   LVS SIGNATURE MAXIMUM                  ALL
+   // LVS FILTER UNUSED OPTION
+   // LVS REPORT OPTION
+   LVS REPORT UNITS                       YES
+   // LVS NON USER NAME PORT
+   LVS NON USER NAME NET                  "^n[0-9]*$" "^net[0-9]*$"
+   // LVS NON USER NAME INSTANCE
+   // LVS IGNORE DEVICE PIN
+
+   // Device Type Map
+
+   LVS DEVICE TYPE                        RESISTOR "mrdn" SOURCE LAYOUT
+   LVS DEVICE TYPE                        RESISTOR "mrdn_hv" SOURCE LAYOUT
+   LVS DEVICE TYPE                        RESISTOR "mrdp" SOURCE LAYOUT
+   LVS DEVICE TYPE                        RESISTOR "mrdp_hv" SOURCE LAYOUT
+   LVS DEVICE TYPE                        RESISTOR "xhrpoly_0p35" SOURCE LAYOUT
+   LVS DEVICE TYPE                        RESISTOR "xuhrpoly_0p35" SOURCE LAYOUT
+   LVS DEVICE TYPE                        RESISTOR "xhrpoly_0p69" SOURCE LAYOUT
+   LVS DEVICE TYPE                        RESISTOR "xuhrpoly_0p69" SOURCE LAYOUT
+   LVS DEVICE TYPE                        RESISTOR "xhrpoly_1p41" SOURCE LAYOUT
+   LVS DEVICE TYPE                        RESISTOR "xuhrpoly_1p41" SOURCE LAYOUT
+   LVS DEVICE TYPE                        RESISTOR "xhrpoly_2p85" SOURCE LAYOUT
+   LVS DEVICE TYPE                        RESISTOR "xuhrpoly_2p85" SOURCE LAYOUT
+   LVS DEVICE TYPE                        RESISTOR "xhrpoly_5p73" SOURCE LAYOUT
+   LVS DEVICE TYPE                        RESISTOR "xuhrpoly_5p73" SOURCE LAYOUT
+   LVS DEVICE TYPE                        RESISTOR "xhrpoly" SOURCE LAYOUT
+   LVS DEVICE TYPE                        RESISTOR "xuhrpoly" SOURCE LAYOUT
+
+   // Reduction
+
+   LVS REDUCE SERIES MOS                  NO
+   LVS REDUCE PARALLEL MOS                NO
+   LVS REDUCE SEMI SERIES MOS             NO
+   LVS REDUCE SPLIT GATES                 YES [ TOLERANCE l 1 w 1 ]
+   LVS REDUCE PARALLEL BIPOLAR            NO
+   LVS REDUCE SERIES CAPACITORS           NO
+   LVS REDUCE PARALLEL CAPACITORS         NO
+   LVS REDUCE SERIES RESISTORS            NO
+   LVS REDUCE PARALLEL RESISTORS          NO
+   LVS REDUCE PARALLEL DIODES             YES
+
+   LVS REDUCE  condiode  PARALLEL
+   LVS REDUCE  condiodeHvPsub  PARALLEL
+   LVS REDUCE  p20vhv1  PARALLEL [ TOLERANCE l 1 w 1 ]
+   LVS REDUCE  n20vhv1  PARALLEL [ TOLERANCE l 1 w 1 ]
+   LVS REDUCE  n20vhviso1  PARALLEL [ TOLERANCE l 1 w 1 ]
+   LVS REDUCE  nvhv  PARALLEL [ TOLERANCE l 1 w 1 ]
+   LVS REDUCE  pvhv  PARALLEL [ TOLERANCE l 1 w 1 ]
+   LVS REDUCE  MP  PARALLEL [ TOLERANCE l 1 w 1 ]
+   LVS REDUCE  M  PARALLEL [ TOLERANCE l 1 w 1 ]
+   LVS REDUCE  MN  PARALLEL [ TOLERANCE l 1 w 1 ]
+   LVS REDUCE  Q(npnpar1x1)  PARALLEL
+   LVS REDUCE  Q(npnpar1x2)  PARALLEL
+   LVS REDUCE  Q(npn_1x1_2p0_hv)  PARALLEL
+   LVS REDUCE  Q(pnppar)  PARALLEL [ TOLERANCE bArea 1 bPeri 1 eArea 1 ePeri 1 ]
+   LVS REDUCE  Q(pnppar5x)  PARALLEL [ TOLERANCE bArea 1 bPeri 1 eArea 1 ePeri 1 ]
+   LVS REDUCE  D  PARALLEL [ TOLERANCE a 1 p 1 ]
+   LVS REDUCE  D  SERIES POS NEG NO
+   LVS REDUCE  C(xcmimc1)  PARALLEL [ TOLERANCE w 1 l 1 ]
+   LVS REDUCE  C(xcmimc2)  PARALLEL [ TOLERANCE w 1 l 1 ]
+   LVS REDUCE  R(mrp1)  PARALLEL [ TOLERANCE w 1 l 1 ]
+   LVS REDUCE  R  PARALLEL [ TOLERANCE w 1 l 1 ]
+   LVS REDUCE  R  SERIES POS NEG NO
+   LVS REDUCE  R(short)  PARALLEL
+   LVS REDUCE  R(short)  SERIES POS NEG NO
+   LVS REDUCE  R(fuse)  PARALLEL NO
+   LVS REDUCE  R(fuse)  SERIES POS NEG NO
+   LVS REDUCE  R(metop)  PARALLEL [ TOLERANCE metopNumber 0 ]
+   LVS REDUCE  R(metop)  SERIES POS NEG NO
+   LVS REDUCTION PRIORITY                 PARALLEL
+   
+   LVS SHORT EQUIVALENT NODES             NO
+
+   // Filter
+
+   LVS FILTER  R(cds_thru)  SHORT SOURCE
+   LVS FILTER  R(cds_thru)  SHORT LAYOUT
+   LVS FILTER  Dpar  OPEN SOURCE
+   LVS FILTER  Dpar  OPEN LAYOUT
+   LVS FILTER  Dpar(DNWDIODE_PW)  OPEN SOURCE
+   LVS FILTER  Dpar(DNWDIODE_PW)  OPEN LAYOUT
+   LVS FILTER  Probe  OPEN SOURCE
+   LVS FILTER  Probe  OPEN LAYOUT
+   LVS FILTER  icecap  OPEN SOURCE
+   LVS FILTER  s8fmlt_iref_termx  OPEN SOURCE
+   LVS FILTER  s8fmlt_neg_termx  OPEN SOURCE
+   LVS FILTER  s8fmlt_termx  OPEN SOURCE
+   LVS FILTER  s8fmlt_vdac_termx  OPEN SOURCE
+   LVS FILTER  diff_dev  OPEN SOURCE
+   LVS FILTER  diff_dev  OPEN LAYOUT
+   LVS FILTER  tap_dev  OPEN SOURCE
+   LVS FILTER  tap_dev  OPEN LAYOUT
+   LVS FILTER  cad_dummy_open_device  OPEN SOURCE
+   LVS FILTER  cad_dummy_open_device  OPEN LAYOUT
+
+   // Trace Property
+
+   TRACE PROPERTY  xcnwvc  m m 0
+   TRACE PROPERTY  xcnwvc  w w 0
+   TRACE PROPERTY  xcnwvc  l l 0
+   TRACE PROPERTY  xcnwvc2  m m 0
+   TRACE PROPERTY  xcnwvc2  w w 0
+   TRACE PROPERTY  xcnwvc2  l l 0
+   TRACE PROPERTY  xchvnwc  m m 0
+   TRACE PROPERTY  q(npnpar1x1)  m m 0
+   TRACE PROPERTY  q(npnpar1x2)  m m 0
+   TRACE PROPERTY  q(npn_1x1_2p0_hv)  m m 0
+   TRACE PROPERTY  q(pnppar)  barea barea 0
+   TRACE PROPERTY  q(pnppar)  bperi bperi 0
+   TRACE PROPERTY  q(pnppar)  earea earea 0
+   TRACE PROPERTY  q(pnppar)  eperi eperi 0
+   TRACE PROPERTY  q(pnppar)  m m 0
+   TRACE PROPERTY  q(pnppar5x)  barea barea 0
+   TRACE PROPERTY  q(pnppar5x)  bperi bperi 0
+   TRACE PROPERTY  q(pnppar5x)  earea earea 0
+   TRACE PROPERTY  q(pnppar5x)  eperi eperi 0
+   TRACE PROPERTY  q(pnppar5x)  m m 0
+   TRACE PROPERTY  d(ndiode)  a a 1
+   TRACE PROPERTY  d(ndiode)  p p 1
+   TRACE PROPERTY  d(ndiode)  m m 0
+   TRACE PROPERTY  d(ndiode_h)  a a 1
+   TRACE PROPERTY  d(ndiode_h)  p p 1
+   TRACE PROPERTY  d(ndiode_h)  m m 0
+   TRACE PROPERTY  d(xesd_ndiode_h_100)  a a 1
+   TRACE PROPERTY  d(xesd_ndiode_h_100)  p p 1
+   TRACE PROPERTY  d(xesd_ndiode_h_100)  m m 0
+   TRACE PROPERTY  d(xesd_ndiode_h_200)  a a 1
+   TRACE PROPERTY  d(xesd_ndiode_h_200)  p p 1
+   TRACE PROPERTY  d(xesd_ndiode_h_200)  m m 0
+   TRACE PROPERTY  d(xesd_ndiode_h_300)  a a 1
+   TRACE PROPERTY  d(xesd_ndiode_h_300)  p p 1
+   TRACE PROPERTY  d(xesd_ndiode_h_300)  m m 0
+   TRACE PROPERTY  d(pdiode)  a a 1
+   TRACE PROPERTY  d(pdiode)  p p 1
+   TRACE PROPERTY  d(pdiode)  m m 0
+   TRACE PROPERTY  d(pdiode_h)  a a 1
+   TRACE PROPERTY  d(pdiode_h)  p p 1
+   TRACE PROPERTY  d(pdiode_h)  m m 0
+   TRACE PROPERTY  d(xesd_pdiode_h_100)  a a 1
+   TRACE PROPERTY  d(xesd_pdiode_h_100)  p p 1
+   TRACE PROPERTY  d(xesd_pdiode_h_100)  m m 0
+   TRACE PROPERTY  d(xesd_pdiode_h_200)  a a 1
+   TRACE PROPERTY  d(xesd_pdiode_h_200)  p p 1
+   TRACE PROPERTY  d(xesd_pdiode_h_200)  m m 0
+   TRACE PROPERTY  d(xesd_pdiode_h_300)  a a 1
+   TRACE PROPERTY  d(xesd_pdiode_h_300)  p p 1
+   TRACE PROPERTY  d(xesd_pdiode_h_300)  m m 0
+   TRACE PROPERTY  d(dnwdiode_psub)  a a 1
+   TRACE PROPERTY  d(dnwdiode_psub)  p p 1
+   TRACE PROPERTY  d(dnwdiode_psub)  m m 0
+   TRACE PROPERTY  d(xesd_ndiode_h_dnwl_100)  a a 1
+   TRACE PROPERTY  d(xesd_ndiode_h_dnwl_100)  p p 1
+   TRACE PROPERTY  d(xesd_ndiode_h_dnwl_100)  m m 0
+   TRACE PROPERTY  d(xesd_ndiode_h_dnwl_200)  a a 1
+   TRACE PROPERTY  d(xesd_ndiode_h_dnwl_200)  p p 1
+   TRACE PROPERTY  d(xesd_ndiode_h_dnwl_200)  m m 0
+   TRACE PROPERTY  d(xesd_ndiode_h_dnwl_300)  a a 1
+   TRACE PROPERTY  d(xesd_ndiode_h_dnwl_300)  p p 1
+   TRACE PROPERTY  d(xesd_ndiode_h_dnwl_300)  m m 0
+   TRACE PROPERTY  xcmvpp  m m 0
+   TRACE PROPERTY  xcmvpp_2  m m 0
+   TRACE PROPERTY  xcmvpp2_nhvnative10x4  m m 0
+   TRACE PROPERTY  xcmvpp2_phv5x4  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_atlas_fingercap2_l5  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_atlas_wafflecap2  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_atlas_wafflecap1  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_atlas_fingercap_l40  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_atlas_fingercap_l20  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_atlas_fingercap_l10  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_atlas_fingercap_l5  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_5x2_met5pullin  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_5x2  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_5x1_met5pullin  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_5x1  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_4x2  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_4x1  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_3x2  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_3x1  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_2x2  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_2x1  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_1x2  m m 0
+   TRACE PROPERTY  xcmvpp_hd5_1x1  m m 0
+   TRACE PROPERTY  xcmvppx4_2xnhvnative10x4  m m 0
+   TRACE PROPERTY  xcmvpp11p5x11p7_polym50p4shield  m m 0
+   TRACE PROPERTY  xcmvpp4p4x4p6_m3_lim5shield  m m 0
+   TRACE PROPERTY  xcmvpp11p5x11p7_m3_lim5shield  m m 0
+   TRACE PROPERTY  xcmvpp8p6x7p9_m3_lim5shield  m m 0
+   TRACE PROPERTY  xcmvpp11p5x11p7_lim5shield  m m 0
+   TRACE PROPERTY  xcmvpp11p5x11p7_polym5shield  m m 0
+   TRACE PROPERTY  xcmvpp11p5x11p7_m5shield  m m 0
+   TRACE PROPERTY  xcmvpp6p8x6p1_lim4shield  m m 0
+   TRACE PROPERTY  xcmvpp6p8x6p1_polym4shield  m m 0
+   TRACE PROPERTY  xcmvpp11p5x11p7_polym4shield  m m 0
+   TRACE PROPERTY  xcmvpp11p5x11p7_m4shield  m m 0
+   TRACE PROPERTY  xcmvpp1p8x1p8  m m 0
+   TRACE PROPERTY  xcmvpp4p4x4p6_m3_lishield  m m 0
+   TRACE PROPERTY  xcmvpp8p6x7p9_m3_lishield  m m 0
+   TRACE PROPERTY  xcmvpp11p5x11p7_m3_lishield  m m 0
+   TRACE PROPERTY  xcmvpp11p5x11p7_m3shield  m m 0
+   TRACE PROPERTY  xcmvpp8p6x7p9_m3shield  m m 0
+   TRACE PROPERTY  xcmvpp4p4x4p6_m3shield  m m 0
+   TRACE PROPERTY  xcmvpp1p8x1p8_m3shield  m m 0
+   TRACE PROPERTY  xcmvpp11p5x11p7_m1m4m5shield  m m 0
+   TRACE PROPERTY  xcmvpp11p5x11p7_m1m4  m m 0
+   TRACE PROPERTY  xcmvpp11p5x11p7_m1m2  m m 0
+   TRACE PROPERTY  xcmvpp4p4x4p6_m1m2  m m 0
+   TRACE PROPERTY  xcmvpp5  m m 0
+   TRACE PROPERTY  xcmvpp4  m m 0
+   TRACE PROPERTY  xcmvpp3  m m 0
+   TRACE PROPERTY  r(mrl1)  w w 1
+   TRACE PROPERTY  r(mrl1)  l l 1
+   TRACE PROPERTY  r(mrl1)  m m 0
+   TRACE PROPERTY  xpwres  w w 1
+   TRACE PROPERTY  xpwres  l l 1
+   TRACE PROPERTY  xpwres  m m 0
+   TRACE PROPERTY  r(short)  m m 0
+   TRACE PROPERTY  r(fuse)  w w 1
+   TRACE PROPERTY  r(fuse)  l l 1
+   TRACE PROPERTY  r(fuse)  m m 0
+   TRACE PROPERTY  r(metop)  metopnumber metopnumber 0
+   TRACE PROPERTY  d(dnwdiode_psub_victim)  a a 10
+   TRACE PROPERTY  d(dnwdiode_psub_victim)  p p 10
+   TRACE PROPERTY  d(dnwdiode_psub_victim)  m m 0
+   TRACE PROPERTY  d(nwdiode_victim)  a a 10
+   TRACE PROPERTY  d(nwdiode_victim)  p p 10
+   TRACE PROPERTY  d(nwdiode_victim)  m m 0
+   TRACE PROPERTY  d(dnwdiode_psub_aggressor)  a a 10
+   TRACE PROPERTY  d(dnwdiode_psub_aggressor)  p p 10
+   TRACE PROPERTY  d(dnwdiode_psub_aggressor)  m m 0
+   TRACE PROPERTY  d(nwdiode_aggressor)  a a 10
+   TRACE PROPERTY  d(nwdiode_aggressor)  p p 10
+   TRACE PROPERTY  d(nwdiode_aggressor)  m m 0
+
+   // User Trace Property
+
+   TRACE PROPERTY  mn(nshort)  m mult w l
+   TRACE PROPERTY  mn(npass)  m mult w l
+   TRACE PROPERTY  mn(nlowvt)  m mult w l
+   TRACE PROPERTY  m(sonos_e)  m mult w l
+   TRACE PROPERTY  m  m mult w l
+   TRACE PROPERTY  m(fnpass)  m mult w l
+   TRACE PROPERTY  mn(nhv)  m mult w l
+   TRACE PROPERTY  mn(nhvnative)  m mult w l
+   TRACE PROPERTY  mn(ntvnative)  m mult w l
+   TRACE PROPERTY  mp(pshort)  m mult w l
+   TRACE PROPERTY  mp  m mult w l
+   TRACE PROPERTY  mp(phighvt)  m mult w l
+   TRACE PROPERTY  mp(plowvt)  m mult w l
+   TRACE PROPERTY  mp(phv)  m mult w l
+   TRACE PROPERTY  mn(nshortesd)  m mult w l
+   TRACE PROPERTY  mn(nhvesd)  m mult w l
+   TRACE PROPERTY  mn(nhvnativeesd)  m mult w l
+   TRACE PROPERTY  mp(phvesd)  m mult w l
+   TRACE PROPERTY  nvhv  m mult w l
+   TRACE PROPERTY  n20vhv1  m mult w l
+   TRACE PROPERTY  n20nativevhv1  m mult w l
+   TRACE PROPERTY  n20vhviso1  m mult w l
+   TRACE PROPERTY  n20nativevhviso1  m mult w l
+   TRACE PROPERTY  pvhv  m mult w l
+   TRACE PROPERTY  p20vhv1  m mult w l
+   TRACE PROPERTY  c(xcmimc1)  w l m
+   TRACE PROPERTY  c(xcmimc2)  w l m
+   TRACE PROPERTY  mrdn  m w l
+   TRACE PROPERTY  mrdn_hv  m w l
+   TRACE PROPERTY  mrdp  m w l
+   TRACE PROPERTY  mrdp_hv  m w l
+   TRACE PROPERTY  r(mrp1)  m w l
+   TRACE PROPERTY  xhrpoly_0p35  m w l
+   TRACE PROPERTY  xuhrpoly_0p35  m w l
+   TRACE PROPERTY  xhrpoly_0p69  m w l
+   TRACE PROPERTY  xuhrpoly_0p69  m w l
+   TRACE PROPERTY  xhrpoly_1p41  m w l
+   TRACE PROPERTY  xuhrpoly_1p41  m w l
+   TRACE PROPERTY  xhrpoly_2p85  m w l
+   TRACE PROPERTY  xuhrpoly_2p85  m w l
+   TRACE PROPERTY  xhrpoly_5p73  m w l
+   TRACE PROPERTY  xuhrpoly_5p73  m w l
+   TRACE PROPERTY  xhrpoly  m w l segments
+   TRACE PROPERTY  xuhrpoly  m w l segments
+
+
+
+                   CELL COMPARISON RESULTS ( TOP LEVEL )
+
+
+
+                         #       ###################       _   _   
+                        #        #                 #       *   *   
+                   #   #         #     CORRECT     #         |     
+                    # #          #                 #       \___/  
+                     #           ###################               
+
+
+
+LAYOUT CELL NAME:         Resist_FB_INV
+SOURCE CELL NAME:         Resist_FB_INV
+
+--------------------------------------------------------------------------------------------------------------
+
+INITIAL NUMBERS OF OBJECTS
+--------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:              4         4
+
+ Nets:               5         5
+
+ Instances:          3         3         MN (4 pins)
+                     8         8         MP (4 pins)
+                     3         0    *    Dpar (2 pins)
+                ------    ------
+ Total Inst:        14        11
+
+
+NUMBERS OF OBJECTS AFTER TRANSFORMATION
+---------------------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:              4         4
+
+ Nets:               5         5
+
+ Instances:          2         2         MP (4 pins)
+                     1         1         INV (2 pins)
+                ------    ------
+ Total Inst:         3         3
+
+
+       * = Number of objects in layout different from number in source.
+
+
+
+**************************************************************************************************************
+                               INFORMATION AND WARNINGS
+**************************************************************************************************************
+
+
+                  Matched    Matched    Unmatched    Unmatched    Component
+                   Layout     Source       Layout       Source    Type
+                  -------    -------    ---------    ---------    ---------
+   Ports:               4          4            0            0
+
+   Nets:                5          5            0            0
+
+   Instances:           2          2            0            0    MP(PSHORT)
+                        1          1            0            0    INV
+                  -------    -------    ---------    ---------
+   Total Inst:          3          3            0            0
+
+
+o Statistics:
+
+   3 layout instances were filtered and their pins removed from adjoining nets.
+
+   9 layout mos transistors were reduced to 2.
+     7 mos transistors were deleted by parallel reduction.
+   9 source mos transistors were reduced to 2.
+     7 mos transistors were deleted by parallel reduction.
+
+
+o Initial Correspondence Points:
+
+   Ports:        VDD GND INP OUT
+
+
+**************************************************************************************************************
+                                         SUMMARY
+**************************************************************************************************************
+
+Total CPU Time:      0 sec
+Total Elapsed Time:  1 sec

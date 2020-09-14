@@ -1,0 +1,59 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  InverterBasedTransceiver
+* Top Cell Name: Resist_FB_INV
+* View Name:     schematic
+* Netlisted on:  Sep 10 21:12:51 2020
+************************************************************************
+
+.INCLUDE  $PDK_HOME/LVS/Calibre/source.cdl
+*.EQUATION
+*.SCALE METER
+.PARAM
+
+
+
+************************************************************************
+* Library Name: InverterBasedTransceiver
+* Cell Name:    Inverter1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT Inverter1 GND INP OUT VDD
+*.PININFO INP:I OUT:O GND:B VDD:B
+mMN2 OUT INP GND GND nshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMN1 OUT INP GND GND nshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMN0 OUT INP GND GND nshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP5 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP4 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP3 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP2 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP1 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP0 OUT INP VDD VDD pshort m=1 w=5.00 l=0.15 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+.ENDS
+
+************************************************************************
+* Library Name: InverterBasedTransceiver
+* Cell Name:    Resist_FB_INV
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT Resist_FB_INV GND INP OUT VDD
+*.PININFO INP:I OUT:O GND:B VDD:B
+XI0 GND INP OUT VDD / Inverter1
+mMP1 OUT OUT net06 VDD pshort m=1 w=0.55 l=8.00 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+mMP0 net06 net06 INP VDD pshort m=1 w=0.55 l=8.00 mult=1 sa=0.0 sb=0.0 sd=0.0 
++ topography=normal area=0.063 perim=1.14
+.ENDS
+
