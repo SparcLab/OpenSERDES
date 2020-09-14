@@ -18,7 +18,7 @@ A chain of CMOS inverters is used as TX driver to drive the input capacitance of
 
 A fully synthesizable Rx is designed using Resistive FB inverter followed by CMOS inverter as sensing and gain element respectively. The following DFF is used to sample the data using the clock recovered by the CDR.
 
-Resistive Feedback inverter is used as sensing element to sense low amplitude received signal at the front end of the receiver. Details of the implementation of Resistive FB inverter can be found in Resistive_FB_inverter folder
+*Resistive Feedback inverter* is used as sensing element to sense low amplitude received signal at the front end of the receiver. Details of the implementation of Resistive FB inverter can be found in Resistive_FB_inverter folder
 
 DFF is the simplest memory block to sample and store the data before deserializing. Master Slave DFF is implemented using NAND logic gates. Details of the same are present in DFF and NAND folders
 
